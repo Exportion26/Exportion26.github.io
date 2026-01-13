@@ -1,0 +1,12 @@
+{
+  "name": "leena-resume",
+  "version": "1.0.0",
+  "description": "Leena Srijandon - Personal Resume Website",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": ["resume", "portfolio", "static-site"],
+  "author": "Leena Srijandon",
+  "license": "MIT"
+}

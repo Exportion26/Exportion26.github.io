@@ -1,0 +1,602 @@
+/* ============================================
+   Leena Srijandon - Resume Website Styles
+   Minimal Pastel Clean Modern UI
+   ============================================ */
+
+/* CSS Variables - Pastel Color Palette */
+:root {
+    /* Primary Colors */
+    --pastel-pink: #FFC4D0;
+    --pastel-pink-light: #FFE4E8;
+    --pastel-pink-dark: #FFA3B8;
+    
+    /* Secondary Colors */
+    --mint-green: #B8E0D2;
+    --mint-green-light: #D6EFE6;
+    --mint-green-dark: #9FCAB8;
+    
+    /* Neutral Colors */
+    --white: #FFFFFF;
+    --off-white: #F9F9F9;
+    --light-gray: #F0F0F0;
+    --medium-gray: #9E9E9E;
+    --dark-gray: #666666;
+    --text-dark: #4A4A4A;
+    --black: #2D2D2D;
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 50%;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.4s ease;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--off-white);
+    color: var(--dark-gray);
+    line-height: 1.7;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ============================================
+   Profile Header
+   ============================================ */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(135deg, var(--white) 0%, var(--pastel-pink-light) 100%);
+    padding: 40px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    flex-shrink: 0;
+}
+
+.avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--mint-green) 0%, var(--mint-green-dark) 100%);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-medium);
+    border: 4px solid var(--white);
+}
+
+.avatar-placeholder span {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.profile-info .tagline {
+    font-size: 18px;
+    color: var(--dark-gray);
+    margin-bottom: 4px;
+}
+
+.profile-info .university {
+    font-size: 15px;
+    color: var(--medium-gray);
+    font-weight: 500;
+}
+
+/* ============================================
+   Main Content Layout
+   ============================================ */
+.main-content {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+}
+
+/* ============================================
+   Cards Base Style
+   ============================================ */
+.card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 24px;
+    transition: box-shadow var(--transition-normal);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+.card h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card h2 i {
+    color: var(--pastel-pink-dark);
+    font-size: 22px;
+}
+
+/* ============================================
+   Sidebar Left
+   ============================================ */
+.sidebar-left {
+    position: sticky;
+    top: 30px;
+    height: fit-content;
+}
+
+/* Contact Card */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--dark-gray);
+    text-decoration: none;
+    padding: 10px 14px;
+    background: var(--off-white);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    font-size: 14px;
+}
+
+.contact-item:hover {
+    background: var(--pastel-pink-light);
+    color: var(--text-dark);
+    transform: translateX(5px);
+}
+
+.contact-item i:first-child {
+    font-size: 18px;
+    color: var(--mint-green-dark);
+    width: 20px;
+    text-align: center;
+}
+
+.portfolio-link {
+    background: linear-gradient(135deg, var(--mint-green-light) 0%, var(--mint-green) 100%);
+    color: var(--text-dark) !important;
+    font-weight: 600;
+}
+
+.portfolio-link:hover {
+    background: linear-gradient(135deg, var(--mint-green) 0%, var(--mint-green-dark) 100%);
+}
+
+.external-icon {
+    margin-left: auto;
+    font-size: 14px !important;
+    opacity: 0.6;
+}
+
+/* Languages Card */
+.language-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang-name {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 15px;
+}
+
+.proficiency-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: var(--radius-full);
+    background: var(--light-gray);
+    transition: background var(--transition-fast);
+}
+
+.dot.filled {
+    background: var(--mint-green);
+}
+
+/* Soft Skills Card */
+.soft-skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.soft-skill-tag {
+    background: linear-gradient(135deg, var(--pastel-pink-light) 0%, var(--pastel-pink) 100%);
+    color: var(--text-dark);
+    padding: 8px 16px;
+    border-radius: var(--radius-xl);
+    font-size: 13px;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.soft-skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+    background: linear-gradient(135deg, var(--pastel-pink) 0%, var(--pastel-pink-dark) 100%);
+}
+
+/* ============================================
+   Content Right
+   ============================================ */
+
+/* Objective Card */
+.objective-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.objective-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--dark-gray);
+}
+
+.objective-text strong {
+    color: var(--pastel-pink-dark);
+    font-weight: 700;
+}
+
+.objective-text.en {
+    font-style: italic;
+    color: var(--medium-gray);
+    padding-left: 16px;
+    border-left: 3px solid var(--mint-green);
+}
+
+.objective-divider {
+    height: 1px;
+    background: linear-gradient(90deg, var(--light-gray), transparent);
+}
+
+/* Education Card */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--mint-green) 0%, var(--pastel-pink-light) 100%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -30px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    background: var(--mint-green);
+    border-radius: var(--radius-full);
+    border: 3px solid var(--white);
+    box-shadow: 0 2px 8px rgba(184, 224, 210, 0.5);
+}
+
+.timeline-content h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.timeline-content .institution {
+    font-size: 15px;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+}
+
+.timeline-content .duration {
+    font-size: 13px;
+    color: var(--medium-gray);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.timeline-content .duration i {
+    font-size: 14px;
+}
+
+/* Skills Card */
+.skills-group {
+    margin-bottom: 24px;
+}
+
+.skills-group:last-child {
+    margin-bottom: 0;
+}
+
+.skills-group h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skills-group h3 i {
+    color: var(--mint-green-dark);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: var(--off-white);
+    color: var(--text-dark);
+    padding: 8px 18px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid var(--light-gray);
+    transition: all var(--transition-fast);
+}
+
+.skill-tag:hover {
+    background: var(--mint-green-light);
+    border-color: var(--mint-green);
+    transform: translateY(-2px);
+}
+
+/* Achievements Card */
+.achievement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--mint-green-light) 0%, var(--off-white) 100%);
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-normal);
+}
+
+.achievement-item:hover {
+    transform: translateX(5px);
+}
+
+.achievement-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--mint-green);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.achievement-icon i {
+    font-size: 26px;
+    color: var(--white);
+}
+
+.achievement-content h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.achievement-content p {
+    font-size: 14px;
+    color: var(--dark-gray);
+    margin-bottom: 4px;
+}
+
+.achievement-level {
+    font-size: 13px;
+    color: var(--medium-gray);
+    font-style: italic;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--medium-gray);
+    font-size: 14px;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar-left {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    .sidebar-left .card {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .profile-info h1 {
+        font-size: 28px;
+    }
+    
+    .profile-info .tagline {
+        font-size: 16px;
+    }
+    
+    .sidebar-left {
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        padding: 22px;
+    }
+    
+    .card h2 {
+        font-size: 18px;
+    }
+    
+    .soft-skills-tags {
+        justify-content: center;
+    }
+    
+    .skill-tags {
+        justify-content: center;
+    }
+    
+    .achievement-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .profile-info h1 {
+        font-size: 24px;
+    }
+    
+    .avatar-placeholder {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .avatar-placeholder span {
+        font-size: 30px;
+    }
+}
+
+/* ============================================
+   Animation Classes
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
